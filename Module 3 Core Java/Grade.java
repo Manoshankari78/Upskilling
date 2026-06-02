@@ -9,5 +9,6 @@ public class Grade{
         else if(m<=79 && m>=70) System.out.println("Grade: C");
         else if(m<=69 && m>=60) System.out.println("Grade: D");
         else System.out.println("Grade: F");
+        sc.close();
     }
 }

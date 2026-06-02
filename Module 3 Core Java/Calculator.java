@@ -31,5 +31,6 @@ class Calculator{
         if(valid){
             System.out.println("Result: "+ans);
         }
+        sc.close();
     }
 }
