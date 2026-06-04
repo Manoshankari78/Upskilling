@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        output {
+            display: block;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event Registration Form</h2>
+    <form id="eventForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required autofocus>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <label for="date">Event Date</label>
+        <input type="date" id="date" required>
+        <label for="eventType">Event Type</label>
+        <select id="eventType" required>
+            <option value="">-- Select Event --</option>
+            <option>Workshop</option>
+            <option>Seminar</option>
+            <option>Conference</option>
+            <option>Cultural Program</option>
+        </select>
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+        <button type="submit">Register</button>
+        <output id="result"></output>
+    </form>
+</div>
+<script>
+    document.getElementById("eventForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let eventType = document.getElementById("eventType").value;
+
+        document.getElementById("result").value =
+            "Registration Successful! " + name +
+            " has registered for the " + eventType + " event.";
+    });
+</script>
+</body>
+</html>

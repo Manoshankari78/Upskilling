@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video invite</title>
+    <script>
+        function ready(){
+            document.getElementById("msg").innerHTML="Video ready to play";
+        }
+        window.onbeforeunload=function(){
+            return "Your form is not completed"
+        }
+    </script>
+</head>
+<body>
+    <video width="400" controls oncanplay="ready()">
+        <source src="https://content.pexels.com/aigc-bundle/videos/fc28747a-9831-462a-a4f6-41ddad9298f4.mp4" type="video/mp4">
+    </video>
+    <p id="msg"></p>
+</body>
+</html>

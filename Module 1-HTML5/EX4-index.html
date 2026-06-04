@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Base Template</title>
+    <style>
+        #welcome{
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #bae6fd;
+        }
+        .highlight{
+            background-color: #fef08a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .gallery-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 15px;
+            margin-top: 15px;
+        }
+        .gallery-table td {
+            vertical-align: top;
+            width: 33.33%;
+            background-color: #f8fafc;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .gallery-thumb {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 3px solid #cbd5e1;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .event-caption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #475569;
+            text-align: center;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="help.html" target="_blank">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <divid="welcome">
+            <h1>Welcome back</h1>
+            <p>We glad to have you back on our portal</p>
+            <p>Exclusive <span style="color: #dc2626; font-weight: bold;">50% off</span> for next Event</p>
+        </div>
+    </section>
+    <section id="events">
+            <h1>Upcoming Events</h1>
+            <p>Discover and register for our upcoming community events here.</p>
+            <h3>Event Gallery</h3>
+            <table class="gallery-table">
+                <tr>
+                    <td>
+                        <img src="https://picsum.photos" alt="Tech Conference Keynote" title="Tech Conference 2026 Keynote" class="gallery-thumb">
+                        <div class="event-caption"><strong>Tech Conference:</strong> Opening keynote address on future industry frameworks.</div>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos" alt="Networking Workshop Attendees" title="Networking Mixer" class="gallery-thumb">
+                        <div class="event-caption"><strong>Networking Mixer:</strong> Members connecting and collaborating during afternoon tea.</div>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos" alt="Web Development Coding Hackathon" title="Hackathon Event" class="gallery-thumb">
+                        <div class="event-caption"><strong>Hackathon 2026:</strong> Teams building innovative community applications live.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://picsum.photos" alt="Design System Panel Discussion" title="UI/UX Panel" class="gallery-thumb">
+                        <div class="event-caption"><strong>UI/UX Panel:</strong> Industry designers discussing modern styling systems.</div>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos" alt="Charity Gala Dinner Table" title="Annual Charity Gala" class="gallery-thumb">
+                        <div class="event-caption"><strong>Charity Gala:</strong> Raising funds for local open-source education programs.</div>
+                    </td>
+                    <td>
+                        <img src="https://picsum.photos" alt="Outdoor Team Building Activity" title="Summer Social Event" class="gallery-thumb">
+                        <div class="event-caption"><strong>Summer Social:</strong> Enjoying outdoor team-building activities and games.</div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Get in Touch wtih us</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;2026 Portal Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

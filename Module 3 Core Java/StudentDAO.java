@@ -2,7 +2,7 @@ import java.sql.*;
 public class StudentDAO{
     private static final String URL="jdbc:mysql://localhost:3306/studentsdb";
     private static final String USER="root";
-    private static final String PASSWORD="maX@89sql";
+    private static final String PASSWORD="password";
     private Connection getConnection() throws SQLException{
         return DriverManager.getConnection(URL,USER,PASSWORD);
     }

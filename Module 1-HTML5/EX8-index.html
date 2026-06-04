@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+    <script>
+        function savePreference(){
+            let event=document.getElementById("event").value;
+            localStorage.setItem("preferredEvent",event);
+        }
+        window.onload=function(){
+            let saved=localStorage.getItem("preferredEvent");
+            if(saved){
+                document.getElementById("event").value=saved;
+            }
+        }
+        function clearData(){
+            localStorage.clear();
+            sessionStorage.clear();
+            alert("Preferences Cleared");
+        }
+    </script>
+</head>
+<body>
+    <select id="event" onchange="savePreference()">
+        <option >Workshop</option>
+        <option >Seminar</option>
+        <option >Conference</option>
+    </select><br><br>
+    <button onclick="clearData()">Clear Preferences</button>
+</body>
+</html>

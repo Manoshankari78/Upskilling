@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f1f5f9; }
+        .debug-box { max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+        .broken-text {
+            color: #ffffff; 
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px dashed red;
+            margin-bottom: 15px;
+        }
+        button { padding: 10px 15px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="debug-box">
+        <h3>Chrome DevTools</h3>
+        <p class="broken-text">Can you see me? Fix my color style in DevTools!</p>
+        <button onclick="processClick()">Trigger Script Breakpoint</button>
+    </div>
+    <script>
+        console.log("DevTools Log: Debugging script loaded successfully.");
+        function processClick() {
+            let userStatus = "Active";
+            let clickCount = 1;
+            console.log("Button clicked! User Status:", userStatus, "Click Count:", clickCount);
+            debugger;  
+            clickCount++;
+            console.log("Execution resumed. New Click Count:", clickCount);
+        }
+    </script>
+</body>
+</html>
